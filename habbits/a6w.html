@@ -126,7 +126,6 @@
                 <th>Series</th>
                 <th>Reps per Series</th>
                 <th>Status</th>
-                <th>Completed On</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -194,11 +193,11 @@
                     <td>${schedule[0]}</td>
                     <td>${schedule[1]}</td>
                     <td>${isCompleted ? 'Completed' : 'Pending'}</td>
-                    <td>${isCompleted && timestamp ? timestamp : '-'}</td>
                     <td>
                         <button onclick="markDayCompleted(${day})" ${isCompleted ? 'disabled' : ''}>
                             ${isCompleted ? 'Done' : 'Mark as Completed'}
                         </button>
+                        ${isCompleted && timestamp ? `<div style="font-size: 0.8em; color: #666; margin-top: 5px;">${timestamp}</div>` : ''}
                     </td>
                 `;
                 tbody.appendChild(row);
