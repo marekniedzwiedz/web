@@ -125,7 +125,6 @@
                 <th>Day</th>
                 <th>Series</th>
                 <th>Reps per Series</th>
-                <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -192,7 +191,6 @@
                     <td>${day}</td>
                     <td>${schedule[0]}</td>
                     <td>${schedule[1]}</td>
-                    <td>${isCompleted ? 'Completed' : 'Pending'}</td>
                     <td>
                         <button onclick="markDayCompleted(${day})" ${isCompleted ? 'disabled' : ''}>
                             ${isCompleted ? 'Done' : 'Mark as Completed'}
